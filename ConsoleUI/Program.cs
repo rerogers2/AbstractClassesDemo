@@ -14,6 +14,29 @@ namespace ConsoleUI
              * Todo follow all comments!! 
              */
 
+            var vehicles = new List<Vehicle>(); // List of Vehicle called vehicles
+            //List<Vehicle> vehicles = new(); //does the same thing as the previous line
+
+            // create 1 car, 1 motorcycle, 2 instances of type Vehicle w/ constructors from derived classes
+            // set the properties with object initializer syntax
+            var car1 = new Car() { HasTrunk = true, Year = "2005", Make = "Ford", Model = "Focus" };
+            var motorcycle1 = new Motorcycle() { HasSideCar = false, Make = "Triumph", Model = "Thunderbird 900", Year = "2000" };
+            Vehicle vehicle1 = new Car() { HasTrunk = false, Make = "Honda", Model = "CRV", Year = "2019" };
+            Vehicle vehicle2 = new Motorcycle() { HasSideCar = true, Year = "2023", Make = "Ural", Model = "Sidecar" };
+
+            vehicles.Add(car1);
+            vehicles.Add(motorcycle1);
+            vehicles.Add(vehicle1);
+            vehicles.Add(vehicle2);
+
+            Console.WriteLine("Our list of vehicles include:\n");
+            foreach (var vehicle in vehicles)
+            {
+                Console.WriteLine($"{vehicle.Year} {vehicle.Make} {vehicle.Model}");
+                vehicle.DriveVirtual();
+                vehicle.DriveAbstract();
+                Console.WriteLine();
+            }
             #region Vehicles
 
             /*
@@ -30,7 +53,7 @@ namespace ConsoleUI
              * Provide the implementations for the abstract methods
              * Only in the Motorcycle class will you override the virtual drive method
             */
-
+             
             // Create a list of Vehicle called vehicles
 
             /*
