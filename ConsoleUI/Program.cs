@@ -35,6 +35,7 @@ namespace ConsoleUI
                 Console.WriteLine($"{vehicle.Year} {vehicle.Make} {vehicle.Model}");
                 vehicle.DriveVirtual();
                 vehicle.DriveAbstract();
+                vehicle.PrintInfo();
                 Console.WriteLine();
             }
             #region Vehicles

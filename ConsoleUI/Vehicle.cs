@@ -12,10 +12,16 @@ namespace ConsoleUI
         public string Make { get; set; } = "default";
         public string Model { get; set; } = "default";
 
+        // this will need to be "override" in each class to have a specific output per class
         public abstract void DriveAbstract(); // no implementation; no scope or body
+
+        // this is the default output for DriveVirtual and needs to be "override" in each class to change it
         public virtual void DriveVirtual() // virtual with implementation 
         {
-            Console.WriteLine("Something here for virtual DriveVirtual method.");
+            Console.WriteLine("Default virtual DriveVirtual method.");
         }
+
+        // this will need to be "override" in each class to have a specific output per class
+        public abstract void PrintInfo();
     }
 }

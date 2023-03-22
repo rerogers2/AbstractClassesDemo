@@ -8,6 +8,7 @@ namespace ConsoleUI
 {
     public class Motorcycle : Vehicle
     {
+        public bool HasSideCar { get; set; }
         public override void DriveAbstract()
         {
             Console.WriteLine("The motorcycle is winding down the lane.");
@@ -18,6 +19,10 @@ namespace ConsoleUI
             Console.WriteLine("Motorcycle virtual DriveVirtual method.");
         }
 
-        public bool HasSideCar { get; set; }
+        public override void PrintInfo()
+        {
+            Console.WriteLine($"Does the motorcycle have a sidecar? {HasSideCar}");
+        }
+        
     }
 }
